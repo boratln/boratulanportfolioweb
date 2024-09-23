@@ -4,7 +4,62 @@
     box-sizing: border-box;
     text-decoration: none;
   }
-  
+/* Navbar background and shadow */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu items */
+.navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+/* Mobil cihazlar için menü geçiş animasyonu */
+.collapse {
+  transition: height 0.5s ease;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Mobilde menülerin dikey kayması */
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .collapse.show {
+    max-height: 500px; /* Menü yüksekliğine göre ayarlanabilir */
+  }
+}
+
+
+
   html {
     scroll-behavior: smooth;
   }
@@ -309,7 +364,7 @@
   /* Linear Gradiant */
   .about .about-content .right .text span {
     /* color: #1e3551; */
-    background: linear-gradient(135deg, #041d3d, #fff, crimson);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -801,50 +856,10 @@
   }
   
   @media (max-width: 947px) {
-    .menu-btn {
-      display: block;
-      z-index: 999;
-    }
-    .menu-btn i.active:before {
-      content: "\f00d";
-    }
-    .navbar .menu {
-      display: none; /* Initially hide the menu */
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      position: fixed;
-      height: 100vh;
-      width: 100%;
-      left: 0;
-      top: 0;
-      background: #111;
-      text-align: center;
-      padding-top: 80px;
-      transition: all 0.3s ease;
-    }
-    
-    .navbar .menu.active {
-      display: flex; /* Show the menu when active */
-    }
-    
-    .navbar .menu-btn {
-      color: black;
-      cursor: pointer; /* Show pointer on hover */
-    }
-    
-    .navbar .menu-btn.hidden {
-      display: none; /* Hide the menu button when the menu is active */
-    }
+ 
+
     
     
-    
-    
-    .navbar .menu li a {
-      display: inline-block;
-      margin: 20px 0;
-      font-size: 25px;
-    }
     .home .home-content .text-2 {
       font-size: 70px;
     }
@@ -927,5 +942,10 @@
       font-size: 23px;
       line-height: 38px;
     }
+    
+      .about .about-content .left img {
+          height: 450px;
+          width: 350px;
   }
+}
   
