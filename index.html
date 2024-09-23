@@ -13,7 +13,7 @@
     <!-- Header -->
     <nav class="navbar">
       <div class="max-width">
-        <div class="logo"><a href="#"><span>Bora Tulan</span><span></span></a></div>
+    
         <ul class="menu">
           <li><a href="#home" class="menu-btn"><strong>Ana Sayfa</strong></a></li>
           <li><a href="#about" class="menu-btn"><strong>Hakkımda</strong></a></li>
@@ -22,7 +22,7 @@
           <li><a href="#projects" class="menu-btn"><strong>Projeler</strong></a></li>
           <li><a href="#contact" class="menu-btn"><strong>İletişim</strong></a></li>
         </ul>
-        <div class="menu-btn">
+        <div class="menu-btn" onclick="toggleMenu()">
           <i class="fas fa-bars"></i>
         </div>
       </div>
@@ -194,29 +194,19 @@
 
             </p>
             <div class="icons">
-  
-              <a href="https://instagram.com/aistscience">
-                <div class="row">
-                  <i class="fa-solid fa-user-large"></i>
-                  <div class="info">
-                    <div class="head">Ad:</div>
-                    <div class="sub-title"><a href="https://aistechx.com/" style="text-decoration: none; color: #333;"> Bora Tulan</a></div>
-                  </div>
-                </div>
-              </a>
-  
+
               <div class="row">
                 <i class="fa-solid fa-location-dot"></i>
                 <div class="info">
-                  <div class="head">Adres:</div>
-                  <div class="sub-title">Cennet Mahallesi, Küçükçekmece/İstanbul</div>
+                  <div class="head">Adres</div>
+                  <div class="sub-title">İstanbul</div>
                 </div>
               </div>
   
               <div class="row">
                 <i class="fa-solid fa-envelope"></i>
                 <div class="info">
-                  <div class="head">Email Adresi:</div>
+                  <div class="head">Email Adresi</div>
                   <div class="sub-title"><a href="mailto:boratulan123@gmail.com" style="text-decoration: none; color: #333;"> boratulan123@gmail.com</a></div>
                 </div>
               </div>
@@ -280,6 +270,12 @@
   
   </body>
   </html>
+
+<script> function toggleMenu() {
+  console.log("deneme");
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('active'); // Toggle the 'active' class
+}</script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://kit.fontawesome.com/5a2907cab4.js" crossorigin="anonymous"></script>
 
