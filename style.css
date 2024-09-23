@@ -251,7 +251,7 @@
     color: #1e3551;
     background: linear-gradient(135deg, #041d3d, #fff, crimson);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*-webkit-text-fill-color: transparent;*/
     font-weight: 500;
   }
   
@@ -809,22 +809,37 @@
       content: "\f00d";
     }
     .navbar .menu {
+      display: none; /* Initially hide the menu */
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
       position: fixed;
       height: 100vh;
       width: 100%;
-      left: -100%;
+      left: 0;
       top: 0;
       background: #111;
       text-align: center;
       padding-top: 80px;
       transition: all 0.3s ease;
     }
+    
     .navbar .menu.active {
-      left: 0;
+      display: flex; /* Show the menu when active */
     }
-    .navbar .menu li {
-      display: block;
+    
+    .navbar .menu-btn {
+      color: black;
+      cursor: pointer; /* Show pointer on hover */
     }
+    
+    .navbar .menu-btn.hidden {
+      display: none; /* Hide the menu button when the menu is active */
+    }
+    
+    
+    
+    
     .navbar .menu li a {
       display: inline-block;
       margin: 20px 0;
